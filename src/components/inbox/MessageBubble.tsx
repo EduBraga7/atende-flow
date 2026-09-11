@@ -1,9 +1,10 @@
 import React from 'react';
 import { User, Bot, AlertTriangle, Layers } from 'lucide-react';
-import { ChatMessage, SourceReference } from '@/lib/conversations/types';
+import { SourceReference } from '@/lib/rag/types';
+import { ConversationMessage } from '@/lib/conversations/types';
 
 interface MessageBubbleProps {
-  msg: ChatMessage;
+  msg: ConversationMessage;
   customerName: string;
   onInspectSource: (source: SourceReference) => void;
 }

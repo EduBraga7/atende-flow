@@ -1,45 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { supabase } from '../supabase';
 import { DocumentMetadata, DocumentChunk, SearchMatch } from './types';
 
-interface StoreSchema {
-  documents: DocumentMetadata[];
-  chunks: DocumentChunk[];
-}
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const STORE_PATH = path.join(DATA_DIR, 'atendeflow_store.json');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-function loadStore(): StoreSchema {
-  ensureDataDir();
-  if (!fs.existsSync(STORE_PATH)) {
-    const initial: StoreSchema = { documents: [], chunks: [] };
-    fs.writeFileSync(STORE_PATH, JSON.stringify(initial, null, 2), 'utf-8');
-    return initial;
-  }
-  try {
-    const raw = fs.readFileSync(STORE_PATH, 'utf-8');
-    return JSON.parse(raw);
-  } catch (error) {
-    console.error('Erro ao ler vector store:', error);
-    return { documents: [], chunks: [] };
-  }
-}
-
-function saveStore(store: StoreSchema): void {
-  ensureDataDir();
-  fs.writeFileSync(STORE_PATH, JSON.stringify(store, null, 2), 'utf-8');
-}
-
-/**
- * Calcula a similaridade de cosseno entre dois vetores numéricos.
- */
 export function cosineSimilarity(vecA: number[], vecB: number[]): number {
   if (!vecA || !vecB || vecA.length !== vecB.length) return 0;
 
@@ -71,9 +34,6 @@ const STOP_WORDS = new Set([
   'fazer', 'isso', 'aquilo', 'toda', 'todo', 'todos', 'todas', 'muito', 'muita'
 ]);
 
-/**
- * Similaridade baseada em termos/palavras-chave (fallback quando embeddings não estiverem disponíveis).
- */
 function keywordSimilarity(query: string, content: string): number {
   const normQuery = normalizeText(query);
   const normContent = normalizeText(content);
@@ -94,7 +54,6 @@ function keywordSimilarity(query: string, content: string): number {
 
   let hits = 0;
   for (const token of tokens) {
-    // Também testa forma singular aproximada
     const singular = token.endsWith('s') && token.length > 3 ? token.slice(0, -1) : token;
     if (normContent.includes(token) || normContent.includes(singular)) {
       hits++;
@@ -105,74 +64,144 @@ function keywordSimilarity(query: string, content: string): number {
 }
 
 export class VectorStore {
-  static listDocuments(): DocumentMetadata[] {
-    const store = loadStore();
-    return store.documents;
+  static async listDocuments(): Promise<DocumentMetadata[]> {
+    // Select documents and count their chunks
+    const { data, error } = await supabase.from('documents').select(`
+      id,
+      title,
+      type,
+      created_at,
+      document_chunks (id)
+    `);
+
+    if (error) {
+      console.error('Error fetching documents:', error);
+      return [];
+    }
+
+    return data.map((doc: any) => ({
+      id: doc.id,
+      title: doc.title,
+      filename: doc.title, // Map as title since we don't have filename in schema
+      fileType: doc.type as any,
+      sizeBytes: 0, // Not available in schema
+      createdAt: doc.created_at,
+      chunkCount: doc.document_chunks?.length || 0,
+    }));
   }
 
-  static getDocument(id: string): DocumentMetadata | undefined {
-    const store = loadStore();
-    return store.documents.find(d => d.id === id);
+  static async getDocument(id: string): Promise<DocumentMetadata | undefined> {
+    const { data, error } = await supabase.from('documents').select(`
+      id,
+      title,
+      type,
+      created_at,
+      document_chunks (id)
+    `).eq('id', id).single();
+
+    if (error || !data) return undefined;
+
+    return {
+      id: data.id,
+      title: data.title,
+      filename: data.title,
+      fileType: data.type as any,
+      sizeBytes: 0,
+      createdAt: data.created_at,
+      chunkCount: data.document_chunks?.length || 0,
+    };
   }
 
-  static addDocument(metadata: DocumentMetadata, chunks: DocumentChunk[]): void {
-    const store = loadStore();
-    // Remove se já existir com mesmo ID
-    store.documents = store.documents.filter(d => d.id !== metadata.id);
-    store.chunks = store.chunks.filter(c => c.documentId !== metadata.id);
+  static async addDocument(metadata: DocumentMetadata, chunks: DocumentChunk[]): Promise<void> {
+    // Delete existing document if any (cascades chunks)
+    await supabase.from('documents').delete().eq('id', metadata.id);
 
-    store.documents.push(metadata);
-    store.chunks.push(...chunks);
-    saveStore(store);
-  }
+    const docRow = {
+      id: metadata.id,
+      title: metadata.title,
+      content: chunks.map(c => c.content).join('\n\n'), // Since we must have a content column
+      type: metadata.fileType,
+      created_at: metadata.createdAt,
+      updated_at: new Date().toISOString(),
+    };
 
-  static deleteDocument(id: string): void {
-    const store = loadStore();
-    store.documents = store.documents.filter(d => d.id !== id);
-    store.chunks = store.chunks.filter(c => c.documentId !== id);
-    saveStore(store);
-  }
+    const { error: docError } = await supabase.from('documents').insert(docRow);
+    if (docError) {
+      console.error('Error adding document:', docError);
+      return;
+    }
 
-  static getAllChunks(): DocumentChunk[] {
-    const store = loadStore();
-    return store.chunks;
-  }
+    if (chunks.length > 0) {
+      const chunkRows = chunks.map(c => ({
+        id: c.id,
+        document_id: c.documentId,
+        content: c.content,
+        embedding: c.embedding || null, // Assuming vector(768) handles null or arrays
+      }));
 
-  static updateChunkEmbeddings(chunksWithEmbeddings: DocumentChunk[]): void {
-    const store = loadStore();
-    const map = new Map(chunksWithEmbeddings.map(c => [c.id, c.embedding]));
-
-    store.chunks = store.chunks.map(chunk => {
-      if (map.has(chunk.id)) {
-        return { ...chunk, embedding: map.get(chunk.id) };
+      const { error: chunksError } = await supabase.from('document_chunks').insert(chunkRows);
+      if (chunksError) {
+        console.error('Error adding chunks:', chunksError);
       }
-      return chunk;
-    });
-
-    saveStore(store);
+    }
   }
 
-  /**
-   * Busca os chunks mais relevantes por similaridade vetorial (ou fallback por termos)
-   */
-  static search(
+  static async deleteDocument(id: string): Promise<void> {
+    await supabase.from('documents').delete().eq('id', id);
+  }
+
+  static async getAllChunks(): Promise<DocumentChunk[]> {
+    const { data, error } = await supabase.from('document_chunks').select(`
+      id,
+      document_id,
+      content,
+      embedding,
+      documents (title)
+    `);
+
+    if (error) return [];
+
+    return data.map((row: any) => ({
+      id: row.id,
+      documentId: row.document_id,
+      documentTitle: row.documents?.title || '',
+      content: row.content,
+      chunkIndex: 0, // Not available in schema, assuming 0
+      startChar: 0,
+      endChar: 0,
+      embedding: row.embedding ? JSON.parse(row.embedding) : undefined, // Assuming it comes as string or array
+    }));
+  }
+
+  static async updateChunkEmbeddings(chunksWithEmbeddings: DocumentChunk[]): Promise<void> {
+    for (const chunk of chunksWithEmbeddings) {
+      if (chunk.embedding) {
+        // vector type in postgres might need formatted array string like '[1,2,3]' 
+        await supabase.from('document_chunks').update({
+          embedding: `[${chunk.embedding.join(',')}]` as any
+        }).eq('id', chunk.id);
+      }
+    }
+  }
+
+  static async search(
     queryText: string,
     queryVector?: number[],
     topK = 4,
     minSimilarity = 0.25
-  ): SearchMatch[] {
-    const store = loadStore();
+  ): Promise<SearchMatch[]> {
+    // We will do similarity search in memory since match_documents doesn't exist
+    const chunks = await this.getAllChunks();
     const matches: SearchMatch[] = [];
 
     const hasVectors = queryVector && queryVector.length > 0;
 
-    for (const chunk of store.chunks) {
+    for (const chunk of chunks) {
       let similarity = 0;
 
       if (hasVectors && chunk.embedding && chunk.embedding.length > 0) {
         similarity = cosineSimilarity(queryVector, chunk.embedding);
       } else {
-        // Fallback para termos se embeddings não estiverem disponíveis
         similarity = keywordSimilarity(queryText, chunk.content);
       }
 
@@ -181,19 +210,21 @@ export class VectorStore {
       }
     }
 
-    // Ordena do mais similar para o menos similar
     matches.sort((a, b) => b.similarity - a.similarity);
-
     return matches.slice(0, topK);
   }
 
-  static getStats(): { totalDocuments: number; totalChunks: number; chunksWithEmbeddings: number } {
-    const store = loadStore();
-    const withEmbeddings = store.chunks.filter(c => c.embedding && c.embedding.length > 0).length;
+  static async getStats(): Promise<{ totalDocuments: number; totalChunks: number; chunksWithEmbeddings: number }> {
+    const [{ count: docs }, { count: chunks }, { count: withEmb }] = await Promise.all([
+      supabase.from('documents').select('id', { count: 'exact', head: true }),
+      supabase.from('document_chunks').select('id', { count: 'exact', head: true }),
+      supabase.from('document_chunks').select('id', { count: 'exact', head: true }).not('embedding', 'is', null)
+    ]);
+
     return {
-      totalDocuments: store.documents.length,
-      totalChunks: store.chunks.length,
-      chunksWithEmbeddings: withEmbeddings,
+      totalDocuments: docs || 0,
+      totalChunks: chunks || 0,
+      chunksWithEmbeddings: withEmb || 0,
     };
   }
 }

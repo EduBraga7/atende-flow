@@ -10,14 +10,14 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const conversation = ConversationStore.get(id);
+    const conversation = await ConversationStore.get(id);
 
     if (!conversation) {
       return NextResponse.json({ error: 'Conversa não encontrada' }, { status: 404 });
     }
 
     // Marca como lida ao abrir
-    ConversationStore.markAsRead(id);
+    await ConversationStore.markAsRead(id);
 
     return NextResponse.json({ conversation });
   } catch (error) {
@@ -42,7 +42,7 @@ export async function PATCH(
       return NextResponse.json({ error: 'Status é obrigatório' }, { status: 400 });
     }
 
-    const updated = ConversationStore.updateStatus(id, status, handoffReason);
+    const updated = await ConversationStore.updateStatus(id, status, handoffReason);
     if (!updated) {
       return NextResponse.json({ error: 'Conversa não encontrada' }, { status: 404 });
     }
@@ -60,7 +60,7 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    const deleted = ConversationStore.delete(id);
+    const deleted = await ConversationStore.delete(id);
     if (!deleted) {
       return NextResponse.json({ error: 'Conversa não encontrada' }, { status: 404 });
     }

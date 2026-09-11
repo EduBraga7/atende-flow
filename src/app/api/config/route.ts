@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const config = getBotConfig();
+    const config = await getBotConfig();
     // Oculta a maior parte da chave por segurança se existir
     const maskedKey = config.geminiApiKey
       ? `${config.geminiApiKey.slice(0, 4)}...${config.geminiApiKey.slice(-4)}`
@@ -25,7 +25,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const updated = saveBotConfig(body);
+    const updated = await saveBotConfig(body);
     return NextResponse.json({
       success: true,
       config: {

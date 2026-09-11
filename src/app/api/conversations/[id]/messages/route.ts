@@ -12,7 +12,7 @@ export async function POST(
 ) {
   try {
     const { id } = await params;
-    const conv = ConversationStore.get(id);
+    const conv = await ConversationStore.get(id);
 
     if (!conv) {
       return NextResponse.json({ error: 'Conversa não encontrada' }, { status: 404 });
@@ -33,7 +33,7 @@ export async function POST(
 
     // 1. Caso do Atendente Humano respondendo
     if (type === 'human_agent') {
-      const result = ConversationStore.addMessage(id, {
+      const result = await ConversationStore.addMessage(id, {
         role: 'assistant',
         senderType: 'human_agent',
         senderName: senderName || 'Atendente Humano',
@@ -55,7 +55,7 @@ export async function POST(
     }
 
     // 2. Caso de Mensagem do Cliente
-    const userMsgResult = ConversationStore.addMessage(id, {
+    const userMsgResult = await ConversationStore.addMessage(id, {
       role: 'user',
       senderType: 'customer',
       senderName: conv.customerName,
@@ -85,7 +85,7 @@ export async function POST(
     const ragResponse = await processRagQuery(content.trim(), history);
 
     // Adiciona a resposta da IA
-    const botMsgResult = ConversationStore.addMessage(id, {
+    const botMsgResult = await ConversationStore.addMessage(id, {
       role: 'assistant',
       senderType: 'bot',
       senderName: 'Sofia IA',

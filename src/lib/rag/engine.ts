@@ -69,7 +69,7 @@ export async function processRagQuery(
   conversationHistory: { role: 'user' | 'assistant'; content: string }[] = [],
   customApiKey?: string
 ): Promise<RagResponse> {
-  const config = getBotConfig();
+  const config = await getBotConfig();
   const apiKey = getGeminiApiKey(customApiKey || config.geminiApiKey);
 
   // 1. Verificação de transbordo
@@ -91,7 +91,7 @@ export async function processRagQuery(
 
   // 3. Busca dos trechos mais relevantes no Vector Store
   // Buscar no Vector Store usando o searchQuery completo
-  const matches = VectorStore.search(searchQuery, queryVector, config.maxChunks ?? 5, config.similarityThreshold ?? 0.2);
+  const matches = await VectorStore.search(searchQuery, queryVector, config.maxChunks ?? 5, config.similarityThreshold ?? 0.2);
 
   const sources: SourceReference[] = matches.map(m => ({
     documentId: m.chunk.documentId,

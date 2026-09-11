@@ -11,8 +11,8 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const documents = VectorStore.listDocuments();
-    const stats = VectorStore.getStats();
+    const documents = await VectorStore.listDocuments();
+    const stats = await VectorStore.getStats();
     return NextResponse.json({ documents, stats });
   } catch (error) {
     console.error('Erro ao listar documentos:', error);
@@ -23,7 +23,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const contentType = req.headers.get('content-type') || '';
-    const config = getBotConfig();
+    const config = await getBotConfig();
     const apiKey = getGeminiApiKey(config.geminiApiKey);
 
     let docTitle = '';
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
     };
 
     // 4. Salvar no Vector Store
-    VectorStore.addDocument(metadata, enrichedChunks);
+    await VectorStore.addDocument(metadata, enrichedChunks);
 
     return NextResponse.json({
       success: true,
@@ -160,7 +160,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: 'ID do documento é obrigatório' }, { status: 400 });
     }
 
-    VectorStore.deleteDocument(id);
+    await VectorStore.deleteDocument(id);
     return NextResponse.json({ success: true, deletedId: id });
   } catch (error) {
     console.error('Erro ao deletar documento:', error);

@@ -311,7 +311,8 @@ class WhatsAppManagerClass {
       const customerName = msg.pushName || `Contato ${rawNumber.slice(-4)}`;
 
       // 1. Localiza ou cria a conversa no ConversationStore
-      const existing = ConversationStore.list().find(
+      const list = await ConversationStore.list();
+      const existing = list.find(
         (c) =>
           c.channel === 'whatsapp' &&
           (c.customerPhone === formattedPhone ||
@@ -323,7 +324,7 @@ class WhatsAppManagerClass {
       const isHumanMode = existing?.status === 'human';
 
       if (!existing) {
-        const created = ConversationStore.create({
+        const created = await ConversationStore.create({
           customerName,
           customerPhone: formattedPhone,
           channel: 'whatsapp',
@@ -333,7 +334,7 @@ class WhatsAppManagerClass {
       }
 
       // 2. Salva a mensagem recebida do paciente na Inbox imediatamente
-      ConversationStore.addMessage(conversationId, {
+      await ConversationStore.addMessage(conversationId, {
         role: 'user',
         senderType: 'customer',
         senderName: customerName,
@@ -380,7 +381,7 @@ class WhatsAppManagerClass {
   }): Promise<void> {
     const { texts, remoteJid, conversationId, sock } = entry;
     try {
-      const conv = ConversationStore.get(conversationId);
+      const conv = await ConversationStore.get(conversationId);
       if (!conv || conv.status === 'human' || conv.status === 'closed') {
         return;
       }
@@ -408,7 +409,7 @@ class WhatsAppManagerClass {
       logger.info({ remoteJid, query: fullQuery, answerLen: ragResponse.answer.length }, 'Sofia IA Respondeu');
 
       // Salva a resposta da Sofia IA no histórico da Inbox
-      ConversationStore.addMessage(conversationId, {
+      await ConversationStore.addMessage(conversationId, {
         role: 'assistant',
         senderType: 'bot',
         senderName: 'Sofia IA',

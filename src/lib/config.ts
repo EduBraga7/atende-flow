@@ -1,9 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import { BotConfig } from './rag/types';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const CONFIG_PATH = path.join(DATA_DIR, 'bot_config.json');
+import { supabase } from './supabase';
 
 export const DEFAULT_CONFIG: BotConfig = {
   businessName: 'Clínica Sorriso & Bem-Estar',
@@ -41,31 +37,45 @@ DIRETRIZES:
   maxChunks: 5,
 };
 
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
+export async function getBotConfig(): Promise<BotConfig> {
+  const { data, error } = await supabase
+    .from('bot_config')
+    .select('*')
+    .eq('id', 'default')
+    .single();
 
-export function getBotConfig(): BotConfig {
-  ensureDataDir();
-  if (!fs.existsSync(CONFIG_PATH)) {
-    fs.writeFileSync(CONFIG_PATH, JSON.stringify(DEFAULT_CONFIG, null, 2), 'utf-8');
+  if (error || !data) {
+    console.error('Erro ao ler configuração do bot do Supabase:', error);
     return DEFAULT_CONFIG;
   }
-  try {
-    const raw = fs.readFileSync(CONFIG_PATH, 'utf-8');
-    return { ...DEFAULT_CONFIG, ...JSON.parse(raw) };
-  } catch (error) {
-    console.error('Erro ao ler configuração do bot:', error);
-    return DEFAULT_CONFIG;
-  }
+
+  return {
+    ...DEFAULT_CONFIG,
+    businessName: data.business_name,
+    systemPrompt: data.bot_persona,
+    similarityThreshold: data.similarity_threshold,
+    maxChunks: data.max_chunks,
+  };
 }
 
-export function saveBotConfig(config: Partial<BotConfig>): BotConfig {
-  ensureDataDir();
-  const current = getBotConfig();
-  const updated: BotConfig = { ...current, ...config };
-  fs.writeFileSync(CONFIG_PATH, JSON.stringify(updated, null, 2), 'utf-8');
+export async function saveBotConfig(config: Partial<BotConfig>): Promise<BotConfig> {
+  const current = await getBotConfig();
+  const updated = { ...current, ...config };
+
+  const { error } = await supabase
+    .from('bot_config')
+    .update({
+      business_name: updated.businessName,
+      bot_persona: updated.systemPrompt,
+      similarity_threshold: updated.similarityThreshold,
+      max_chunks: updated.maxChunks,
+      updated_at: new Date().toISOString()
+    })
+    .eq('id', 'default');
+
+  if (error) {
+    console.error('Erro ao salvar config no Supabase:', error);
+  }
+
   return updated;
 }

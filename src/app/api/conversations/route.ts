@@ -10,8 +10,8 @@ export async function GET(req: NextRequest) {
     const statusParam = searchParams.get('status') as ConversationStatus | null;
     const search = searchParams.get('search') || undefined;
 
-    const conversations = ConversationStore.list(statusParam || undefined, search);
-    const stats = ConversationStore.getStats();
+    const conversations = await ConversationStore.list(statusParam || undefined, search);
+    const stats = await ConversationStore.getStats();
 
     return NextResponse.json({ conversations, stats });
   } catch (error) {
@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const newConv = ConversationStore.create(body);
+    const newConv = await ConversationStore.create(body);
     return NextResponse.json({ success: true, conversation: newConv });
   } catch (error) {
     console.error('Erro ao criar conversa:', error);
