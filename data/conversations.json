@@ -1,0 +1,488 @@
+[
+  {
+    "id": "conv_1789154512606_h4o0",
+    "customerName": "Clarice Braga",
+    "customerPhone": "+3100983206036@lid",
+    "channel": "whatsapp",
+    "status": "bot",
+    "unreadCount": 0,
+    "lastMessage": "Olá! Para a **Linha 104 – Pegorelli Tarumãs via UPA Sul** em **dias úteis**, os horários de saída são:\n\n**Saída Centro:**\n04:25, 05:00, 05:35, 06:25, 07:15, 07:55, 08:35, 09:25, 11:05, 11:45, 12:35, 13:15, 14:05, 14:45, 15:35, 16:20, 17:05, 17:45, 19:10, 19:30, 20:55, 21:40, 22:15 e 22:55.\n\n**Saída Masako Sone:**\n04:45, 05:00, 06:25, 07:15, 08:05, 08:45, 09:25, 10:15, 11:55, 12:35, 13:25, 14:05, 15:00, 15:35, 16:25, 17:10, 18:35, 20:00, 20:20, 21:45, 22:30 e 23:05.\n\nSe precisar de mais alguma informação, estou à disposição!",
+    "lastMessageAt": "2026-09-11T19:41:12.541Z",
+    "createdAt": "2026-09-11T19:21:52.606Z",
+    "messages": [
+      {
+        "id": "msg_1789154512608_osk7",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Oi",
+        "timestamp": "16:21"
+      },
+      {
+        "id": "msg_1789154514997_8pq4",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Seja muito bem-vindo(a)! Como posso ajudar você hoje? Se precisar de agendamento, tirar alguma dúvida ou falar com a recepção, estou à disposição!",
+        "timestamp": "16:21",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154523273_d9dm",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Tá bem?",
+        "timestamp": "16:22"
+      },
+      {
+        "id": "msg_1789154585753_z437",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Tudo ótimo por aqui, muito obrigada por perguntar! 😊 E com você, como estão as coisas?\n\nComo posso te ajudar hoje? Se precisar agendar uma consulta, tirar alguma dúvida ou falar com a nossa equipe, estou à disposição!",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154599473_prl2",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Me ajuda",
+        "timestamp": "16:23"
+      },
+      {
+        "id": "msg_1789154602080_mb83",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Claro, estou aqui para ajudar você. \n\nPoderia me contar um pouco mais sobre o que está acontecendo ou qual é a sua dúvida? Se você estiver sentindo alguma dor ou for uma situação de urgência, recomendo que procure imediatamente o atendimento de urgência ou fale diretamente com a nossa recepção. \n\nEstou à disposição para o que precisar!",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154609377_14x6",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Vai me ajudar?",
+        "timestamp": "16:23"
+      },
+      {
+        "id": "msg_1789154612366_3xah",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Sim, com certeza vou ajudar você! 😊\n\nPoderia me contar um pouco mais sobre o que você está precisando? Se você estiver sentindo alguma dor ou for uma situação de urgência, recomendo que procure imediatamente o atendimento de urgência ou fale diretamente com a nossa secretária/recepção. \n\nEstou aqui à disposição! Como posso ajudar?",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154617445_n5rj",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Sei lá",
+        "timestamp": "16:23"
+      },
+      {
+        "id": "msg_1789154619925_yiei",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Entendo perfeitamente, às vezes é difícil saber por onde começar. \n\nSe você estiver sentindo qualquer dor ou for uma situação de urgência, recomendo que procure imediatamente o atendimento de urgência ou fale diretamente com a nossa recepção, combinado?\n\nCaso queira apenas conversar ou tirar alguma dúvida, estou aqui à disposição para ajudar no que for possível. Se preferir, também posso avisar a nossa equipe de atendimento para que eles entrem em contato com você e auxiliem da melhor forma. O que acha? 😊",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154624687_6k6o",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Kkk",
+        "timestamp": "16:23"
+      },
+      {
+        "id": "msg_1789154627031_9bri",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! 😊 \n\nFico feliz em ver você sorrindo! \n\nSe precisar de qualquer informação, tirar alguma dúvida ou se eu puder ajudar em algo mais, é só me falar. Caso prefira, também posso avisar a nossa equipe de atendimento para que eles entrem em contato com você. \n\nComo posso ajudar hoje?",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789154629917_sxq9",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Gggg",
+        "timestamp": "16:23"
+      },
+      {
+        "id": "msg_1789154632220_h1uz",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! 😊\n\nParece que a mensagem foi enviada por engano, mas não tem problema nenhum! \n\nSe precisar de qualquer informação, tirar alguma dúvida ou se eu puder ajudar em algo, é só me falar. Caso prefira, também posso avisar a nossa equipe de atendimento para que eles entrem em contato com você diretamente. \n\nComo posso ajudar hoje?",
+        "timestamp": "16:23",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155073021_eb5z",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Oi",
+        "timestamp": "16:31"
+      },
+      {
+        "id": "msg_1789155098963_l6zc",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! 😊 \n\nComo posso ajudar você hoje? Se precisar de alguma informação, tirar dúvidas ou se preferir falar diretamente com a nossa equipe, é só me avisar! Estou à disposição.",
+        "timestamp": "16:31",
+        "sources": [],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155518067_8z5y",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Oi",
+        "timestamp": "16:38"
+      },
+      {
+        "id": "msg_1789155523008_lrk1",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! 😊\n\nComo posso ajudar você com o Transporte Público de Caraguatatuba hoje? Se precisar de horários, linhas ou itinerários, é só me falar!",
+        "timestamp": "16:38",
+        "sources": [
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "eiro \nCentenário  dos  Batistas,  Avenida  Rio  Branco,  Avenida  Miguel  Varlez,  Avenida  Prestes  Maia,  Avenida  Dr.\n\nArthur \nCosta Filho, Rua Caçapava, Avenida Presidente Castelo Branco, Avenida Brasil, Rua Ubatuba, Rua São Sebastião, \nAvenida Siqueira Campos, Avenida Presidente Castelo Branco, Rodovia Caraguá-Ubatuba, Rua Antônio Henrique de \nMesquita, Rua José Pedro de Oliveira Barbosa, Rua Mangueira, Rua Pedro Januário Leite, Rua Benedito Roque dos \nSantos.",
+            "similarity": 0.62,
+            "chunkIndex": 5
+          },
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.61,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.61,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155504580_rscsk",
+            "documentTitle": "105-Pegorelli-Tarumas-via-Pereque",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.61,
+            "chunkIndex": 0
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155532241_8p8k",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Que horas tem ônibus para o tinga?",
+        "timestamp": "16:38"
+      },
+      {
+        "id": "msg_1789155581776_9hrx",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "?",
+        "timestamp": "16:39"
+      },
+      {
+        "id": "msg_1789155583598_h05w",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Para consultar os horários da **Linha 100 (Tinga - Olaria via Rodoviária)**, você poderia me informar se a viagem é para **Dias Úteis**, **Sábados e Feriados** ou **Domingos**?",
+        "timestamp": "16:39",
+        "sources": [
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 100 - TINGA - OLARIA VIA RODOVIÁRIA \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Tinga Saída Olaria Saída Tinga Saída Olaria Saída Tinga Saída Olaria \n 06:30  06:30  06:30 \n06:30 07:30 06:30 07:30 07:30 08:30 \n07:30 08:30 07:30 08:30 Tinga Terminal Sumaré \n08:30 09:30* 08:30 09:30* 09:30 10:00 \n    09:30** 10:30* 09:30** 10:30* Terminal Sumaré Tinga \nRodoviária Olaria Rodoviária Olaria 11:00 11:30 \n11:00 11:30 11:00 11:30 11:30 12:30 \nTerminal Sumaré Tinga Terminal Sumaré Tinga 13:30 14:30 \n11:00 11:30 11:00 11:30 15:30 16:30 \n 11:30 12:30  11:30 12:30 17:30 18:30 \n12:30 13:30 12:30 13:30 19:30 20:30 \n13:30 14:30 13:30 14:30 Tinga Rodoviária \n14:30 15:30 14:30 15:30 20:30 21:00 \n15:30 16:30 15:30 16:30 Rodoviária Olaria \n16:30 17:30 16:30 17:30 22:00 22:30 \n17:30 18:30 17:30 18:30   \n18:30 19:30 18:30 19:30 \n*VIAGEM SAI DA OLARIA E SEGUE \nATÉ A RODOVIÁRIA \n   20:30*    20:30* \n   20:30**     20:30**  \n**VIAGEM SAI DO TINGA E SEGUE \nATÉ O TERMINAL SUMARÉ \nTerminal Sumaré Tinga Terminal Sumaré Tinga \n22:00 22:30 22:00 22:30   \nRodoviária Olaria Rodoviária Olaria   \n22:00 22:30 22:00 22:30   \n 22:30  22:30   \n22:30 23:30 22:30 23:30",
+            "similarity": 0.8,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "raguatatuba. \n______________________________________________________________________________________________\n\nITINERÁRIO\n\nSAÍDA TINGA: Avenida Marechal Deodoro da Fonseca, Rua Manoel Bartolomeu de Barros, Rua Benedita \nMendes de Souza, Rua Elvira Perpétua, Rua Dom Pedro II, Rua Epitácio Pessoa, Avenida Marechal Floriano Peixoto, \nAvenida Rio Branco, Avenida Ver. Aristides Anísio dos Santos, Avenida Brasília, Rua Monteiro Júnior, Praça Primeiro \nCentenário  dos  Batistas,  Avenida  Rio  Branco,  Avenida  Miguel  Varlez,  Avenida  Prestes  Maia,  Avenida  Dr.",
+            "similarity": 0.73,
+            "chunkIndex": 4
+          },
+          {
+            "documentId": "doc_1789155513007_s9xkn",
+            "documentTitle": "108-Jaragua",
+            "content": "Página 1 de 2\n\nQUADRO DE HORÁRIOS\n\nLINHA 108 – JARAGUÁ \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Saída Perequê Saída Centro Saída Perequê Saída Centro Saída Perequê \n 04:10  04:10  04:30 \n 04:40  04:40  05:20 \n 05:15  05:15 05:30 06:10 \n05:00 05:45 05:00 05:45 06:20 07:00 \n05:40 06:25 05:40 06:25 07:10 07:50 \n06:15 07:00 06:20  07:05 08:00 08:40 \n06:20       07:05 FV 07:00 07:45 08:50 09:30 \n07:00 07:45 07:40 08:25 09:40 10:20 \n07:40 08:25 08:20 09:05 11:30 12:10 \n08:20 09:05 09:00 09:45 12:20 13:00 \n09:00 09:45 10:40 11:25 13:10 13:50 \n10:40 11:25 11:20 12:05 14:00 14:50 \n11:20 12:05 12:00 12:45 15:00 15:50 \n12:00 12:45 12:40 13:25 15:50 16:40 \n12:40 13:25 13:20 14:05 16:40 17:30 \n13:20 14:05 14:00 14:45 17:30 18:20 \n14:00 14:45 14:40 15:25 19:20 20:10 \n14:40 15:25 15:20 16:05 20:10 21:00 \n15:20 16:05 16:00 16:45 21:00 21:50 \n16:00 16:45 16:40 17:25 21:50 22:40 \n16:20 17:20 17:20  18:05 22:40  \n16:40 17:25 18:00 18:45 23:30  \n17:20       18:05 FV 18:40 19:25   \n18:00 18:45 20:20 21:05   \n18:40 19:25 21:00 21:45   \n20:20 21:05 21:40 22:25   \n21:00 21:45 22:00 22:45   \n21:40 22:25 23:00 23:45   \n23:00 23:45 23:30    \n23:30  23:40    \n23:40  01:00    \n  01:00",
+            "similarity": 0.72,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155491140_2pjoi",
+            "documentTitle": "102-Morro-do-Algodao-Pontal-Golfinho-Novo",
+            "content": "IAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Saída M. Algodão Saída Centro Saída M. Algodão Saída Centro Saída M.\n\nAlgodão \n  05:35   05:35  05:15 \n 06:10  06:00 06:00 06:45 \n06:20 07:00 06:20 07:00 07:45 08:30 \n07:00 07:45 07:00 07:45 09:30 10:15 \n08:00 08:45 08:00 08:45 12:15 13:00 \n08:45 09:30 10:00 10:45 14:00 14:45 \n10:45 11:30 10:50 11:35 15:45 16:30 \n11:30 12:15 11:45 12:30 18:30 19:20 \n12:30 13:15 12:35 13:20 20:10 21:00 \n13:15 14:00 13:30 14:15 21:50 22:40 \n14:30 15:15 14:20 15:05 23:30  \n15:25 16:10 15:25 16:10   \n16:05 17:00 16:05 17:00   \n16:30 17:20 17:50 18:40   \n17:15 18:05 FV 20:30 21:20   \n18:00 18:50 22:00 22:45   \n18:20 19:10 00:00    \n19:05 19:55     \n            19:55 20:40     \n21:15 22:00 \nFI – ATENDE FACULDADE NO SENTIDO CENTRO - BAIRRO \n22:10 FI 22:55 \nFV – ATENDE FACULDADE NO SENTIDO BAIRRO - CENTRO",
+            "similarity": 0.72,
+            "chunkIndex": 1
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155590112_7ych",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Hoje",
+        "timestamp": "16:39"
+      },
+      {
+        "id": "msg_1789155595325_t6zh",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Para que eu possa te passar o horário certinho do ônibus para o **Tinga**, por favor, me informe se você precisa para **Dias Úteis**, **Sábados** ou **Domingos**. 😊",
+        "timestamp": "16:39",
+        "sources": [
+          {
+            "documentId": "doc_1789155513007_s9xkn",
+            "documentTitle": "108-Jaragua",
+            "content": "Página 1 de 2\n\nQUADRO DE HORÁRIOS",
+            "similarity": 0.61,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155558770_swejp",
+            "documentTitle": "405-Jetuba-a-partir-de-31-03",
+            "content": "P055, \ns dos Santos, Rodovia Ubatuba-Caraguá SP 055, Avenida Presidente Castelo Branco, \nRua Fernando Costa, Avenida Dr.\n\nArthur Costa Filho, Avenida Prestes Maia, Avenida Rio de Janeiro, Avenida Miguel \nVarlez, Avenida Rio Branco, Avenida Vereador Aristides Anísio dos Santos, Avenida Brasília, Rua Monteiro Júnior,",
+            "similarity": 0.6,
+            "chunkIndex": 5
+          },
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.6,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.6,
+            "chunkIndex": 0
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155602731_g3aa",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Uteis",
+        "timestamp": "16:40"
+      },
+      {
+        "id": "msg_1789155604548_nld5",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Como hoje é dia útil, vou verificar os horários da Linha 100 (Tinga - Olaria via Rodoviária). \n\nPeço desculpas, mas os detalhes exatos dos horários desta linha não constam na minha base de dados atual. Para garantir que você não perca o ônibus, recomendo verificar o quadro no ponto de atendimento ou perguntar ao fiscal presente na rodoviária. \n\nSe precisar de ajuda com outra linha (como Pegorelli/Tarumãs ou Vapapesca), é só me avisar!",
+        "timestamp": "16:40",
+        "sources": [
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.64,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.64,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155504580_rscsk",
+            "documentTitle": "105-Pegorelli-Tarumas-via-Pereque",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.64,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155515834_46buu",
+            "documentTitle": "109-Vapapesca",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.64,
+            "chunkIndex": 0
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155615751_ayn8",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Como você confirmou que precisa para **Dias Úteis**, posso te ajudar com a linha **102 - Morro do Algodão / Pontal / Golfinho / Novo**. \n\nOs horários de saída do **Centro** para o Morro do Algodão em dias úteis são:\n05:35, 06:10, 06:20, 07:00, 08:00, 08:45, 10:45, 11:30, 12:30, 13:15, 14:30, 15:25, 16:05, 16:30, 17:15, 18:00, 18:20, 19:05 e 21:15 (além do horário com atendimento à faculdade às 22:10 FI).\n\nSe você estiver no **Morro do Algodão** sentido Centro, os horários de saída são:\n05:35, 06:00, 07:00, 07:45, 08:45, 09:30, 11:30, 12:15, 13:15, 14:00, 15:15, 16:10, 17:00, 17:20, 18:05, 18:50, 19:10, 19:55 e 22:00.\n\nSe precisar de outra linha ou bairro, por favor, me informe o nome correto para que eu possa verificar!",
+        "timestamp": "16:40",
+        "sources": [
+          {
+            "documentId": "doc_1789155491140_2pjoi",
+            "documentTitle": "102-Morro-do-Algodao-Pontal-Golfinho-Novo",
+            "content": "IAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Saída M. Algodão Saída Centro Saída M. Algodão Saída Centro Saída M.\n\nAlgodão \n  05:35   05:35  05:15 \n 06:10  06:00 06:00 06:45 \n06:20 07:00 06:20 07:00 07:45 08:30 \n07:00 07:45 07:00 07:45 09:30 10:15 \n08:00 08:45 08:00 08:45 12:15 13:00 \n08:45 09:30 10:00 10:45 14:00 14:45 \n10:45 11:30 10:50 11:35 15:45 16:30 \n11:30 12:15 11:45 12:30 18:30 19:20 \n12:30 13:15 12:35 13:20 20:10 21:00 \n13:15 14:00 13:30 14:15 21:50 22:40 \n14:30 15:15 14:20 15:05 23:30  \n15:25 16:10 15:25 16:10   \n16:05 17:00 16:05 17:00   \n16:30 17:20 17:50 18:40   \n17:15 18:05 FV 20:30 21:20   \n18:00 18:50 22:00 22:45   \n18:20 19:10 00:00    \n19:05 19:55     \n            19:55 20:40     \n21:15 22:00 \nFI – ATENDE FACULDADE NO SENTIDO CENTRO - BAIRRO \n22:10 FI 22:55 \nFV – ATENDE FACULDADE NO SENTIDO BAIRRO - CENTRO",
+            "similarity": 0.66,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155513007_s9xkn",
+            "documentTitle": "108-Jaragua",
+            "content": "Página 1 de 2\n\nQUADRO DE HORÁRIOS",
+            "similarity": 0.63,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155542392_ljtur",
+            "documentTitle": "306-Tabatinga-Massaguacu-via-Jetuba",
+            "content": "uiz Soares, Avenida Maestro Heitor de Carvalho, \nRua Manoel Ricardo Francisco, Rua Nereu de Oliveira Ramos, Rua Carla C.\n\nAlves da Silva Coutinho, Rua Irineu de \nMelo Neto, Rua Seis, Rua Irmã Lucília, Rua Pedro Xavier do Nascimento, Rodovia Caraguá-Ubatuba SP055, Avenida \nEurico Gaspar Dutra, Rua João Manoel de Oliveira, Rua Antônio M. de Oliveira Filho.\n\nSAÍDA  BAIRRO:  Rua  Antônio  M. de  Oliveira  Filho,  Rua  Raimundo  Muniz,  Rua  João  Manoel  de  Oliveira,  \nAvenida Eurico Gaspar Dutra, Rodovia Ubatuba-Caraguá SP055, Rua Pedro Xavier do Nascimento, Rua Irmã Lucília, \nRua  Seis,  Rua  Irineu  de  Melo  Neto,  Rua  Carla  C.",
+            "similarity": 0.63,
+            "chunkIndex": 5
+          },
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "eiro \nCentenário  dos  Batistas,  Avenida  Rio  Branco,  Avenida  Miguel  Varlez,  Avenida  Prestes  Maia,  Avenida  Dr.\n\nArthur \nCosta Filho, Rua Caçapava, Avenida Presidente Castelo Branco, Avenida Brasil, Rua Ubatuba, Rua São Sebastião, \nAvenida Siqueira Campos, Avenida Presidente Castelo Branco, Rodovia Caraguá-Ubatuba, Rua Antônio Henrique de \nMesquita, Rua José Pedro de Oliveira Barbosa, Rua Mangueira, Rua Pedro Januário Leite, Rua Benedito Roque dos \nSantos.",
+            "similarity": 0.63,
+            "chunkIndex": 5
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155628003_s8o4",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "Qual horário para o pegoreli?",
+        "timestamp": "16:40"
+      },
+      {
+        "id": "msg_1789155638469_fvd6",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Para o **Pegorelli (Tarumãs)**, temos duas opções de rotas: via **Perequê (Linha 105)** ou via **UPA Sul (Linha 104)**. \n\nVocê gostaria de consultar os horários para **dias úteis, sábados ou domingos**?",
+        "timestamp": "16:40",
+        "sources": [
+          {
+            "documentId": "doc_1789155504580_rscsk",
+            "documentTitle": "105-Pegorelli-Tarumas-via-Pereque",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 105 – PEGORELLI TARUMÃS VIA PEREQUÊ \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Masako Sone Saída Centro Masako Sone Saída Centro Masako Sone \n 04:15  05:25  06:00 \n 05:00 05:30 06:20 07:00 07:50 \n 05:20 06:30 07:20 09:00 09:50 \n05:15 06:05 07:30 08:20 12:00 12:50 \n06:00 06:50 08:30 09:20 14:00 14:50 \n06:50 07:40 09:30 10:20 16:00 16:50 \n07:25 08:15 10:30 11:20 18:00 18:50 \n08:20 09:10 12:30 13:20 21:00 21:50 \n10:00 10:50 13:30 14:20 23:00 23:50 \n10:35 11:25 14:30 15:20 01:00  \n11:30 12:20 15:30 16:20   \n12:10 13:00 16:30 17:20   \n12:45 13:35 17:30 18:20   \n13:40 14:30 18:30 19:20   \n14:30 15:20 20:30 21:20   \n15:05 15:55   21:30   22:20   \n16:00 16:50   22:30   23:20   \n16:40 17:50   23:30   \n17:15 18:05   00:30   \n18:10 19:00 FI – ATENDE A FACULDADE NO SENTIDO CENTRO - BAIRRO \n20:10 21:00 \nPara  maior  comodidade  sugerimos  baixar  o  aplicativo  da  SOU,  \natravés                  do                  link                  segue                  link                  \nhttps://play.google.com/store/apps/details?id=br.com.sou.app.",
+            "similarity": 0.71,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 104 – PEGORELLI TARUMÃS VIA UPA SUL \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Masako Sone Saída Centro Masako Sone Saída Centro Masako Sone \n 04:25  04:45  05:00 \n 05:00  05:00 06:00 06:50 \n05:35 06:25  05:50 08:00 08:50 \n06:25 07:15 06:00 06:50 11:00 11:50 \n07:15 08:05 07:00 07:50 13:00 13:50 \n07:55 08:45 08:00 08:50 15:00 15:50 \n08:35 09:25 09:00 09:50 17:00 17:50 \n09:25 10:15 11:00 11:50 20:00 20:50 \n11:05 11:55 12:00 12:50 22:00 22:50 \n11:45 12:35 13:00 13:50 00:00  \n12:35 13:25 14:00 14:50   \n13:15 14:05 15:00 15:50   \n14:05 15:00 16:00 16:50   \n14:45 15:35 17:00 17:50   \n15:35 16:25 18:00 18:50   \n16:20 17:10 20:00 20:50   \n17:05    18:00 FV 21:00 21:50   \n17:45 18:35 22:00 22:50   \n19:10 20:00 23:00 23:50  \n19:30 20:20 00:00   \n20:55 21:45  01:00   \n21:40 22:30 FV – ATENDE A FACULDADE NO SENTIDO BAIRRO - CENTRO \n22:15 23:05  \n22:55  \nPara  maior  comodidade  sugerimos  baixar  o  aplicativo  da  \nSOU,              através              do              link              segue              link              \nhttps://play.google.com/store/apps/details?id=br.com.sou.app.",
+            "similarity": 0.7,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155481295_ecv82",
+            "documentTitle": "LINHA-100-TINGA-OLARIA-VIA-RODOVIARIA-2025",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.7,
+            "chunkIndex": 0
+          },
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS",
+            "similarity": 0.7,
+            "chunkIndex": 0
+          }
+        ],
+        "handoffTriggered": false
+      },
+      {
+        "id": "msg_1789155667031_4qsc",
+        "role": "user",
+        "senderType": "customer",
+        "senderName": "Clarice Braga",
+        "content": "104",
+        "timestamp": "16:41"
+      },
+      {
+        "id": "msg_1789155672542_s95e",
+        "role": "assistant",
+        "senderType": "bot",
+        "senderName": "Sofia IA",
+        "content": "Olá! Para a **Linha 104 – Pegorelli Tarumãs via UPA Sul** em **dias úteis**, os horários de saída são:\n\n**Saída Centro:**\n04:25, 05:00, 05:35, 06:25, 07:15, 07:55, 08:35, 09:25, 11:05, 11:45, 12:35, 13:15, 14:05, 14:45, 15:35, 16:20, 17:05, 17:45, 19:10, 19:30, 20:55, 21:40, 22:15 e 22:55.\n\n**Saída Masako Sone:**\n04:45, 05:00, 06:25, 07:15, 08:05, 08:45, 09:25, 10:15, 11:55, 12:35, 13:25, 14:05, 15:00, 15:35, 16:25, 17:10, 18:35, 20:00, 20:20, 21:45, 22:30 e 23:05.\n\nSe precisar de mais alguma informação, estou à disposição!",
+        "timestamp": "16:41",
+        "sources": [
+          {
+            "documentId": "doc_1789155500535_37y9s",
+            "documentTitle": "104-Pegorelli-Tarumas-via-UPA-Sul",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 104 – PEGORELLI TARUMÃS VIA UPA SUL \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Masako Sone Saída Centro Masako Sone Saída Centro Masako Sone \n 04:25  04:45  05:00 \n 05:00  05:00 06:00 06:50 \n05:35 06:25  05:50 08:00 08:50 \n06:25 07:15 06:00 06:50 11:00 11:50 \n07:15 08:05 07:00 07:50 13:00 13:50 \n07:55 08:45 08:00 08:50 15:00 15:50 \n08:35 09:25 09:00 09:50 17:00 17:50 \n09:25 10:15 11:00 11:50 20:00 20:50 \n11:05 11:55 12:00 12:50 22:00 22:50 \n11:45 12:35 13:00 13:50 00:00  \n12:35 13:25 14:00 14:50   \n13:15 14:05 15:00 15:50   \n14:05 15:00 16:00 16:50   \n14:45 15:35 17:00 17:50   \n15:35 16:25 18:00 18:50   \n16:20 17:10 20:00 20:50   \n17:05    18:00 FV 21:00 21:50   \n17:45 18:35 22:00 22:50   \n19:10 20:00 23:00 23:50  \n19:30 20:20 00:00   \n20:55 21:45  01:00   \n21:40 22:30 FV – ATENDE A FACULDADE NO SENTIDO BAIRRO - CENTRO \n22:15 23:05  \n22:55  \nPara  maior  comodidade  sugerimos  baixar  o  aplicativo  da  \nSOU,              através              do              link              segue              link              \nhttps://play.google.com/store/apps/details?id=br.com.sou.app.",
+            "similarity": 0.67,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155504580_rscsk",
+            "documentTitle": "105-Pegorelli-Tarumas-via-Pereque",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 105 – PEGORELLI TARUMÃS VIA PEREQUÊ \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Centro Masako Sone Saída Centro Masako Sone Saída Centro Masako Sone \n 04:15  05:25  06:00 \n 05:00 05:30 06:20 07:00 07:50 \n 05:20 06:30 07:20 09:00 09:50 \n05:15 06:05 07:30 08:20 12:00 12:50 \n06:00 06:50 08:30 09:20 14:00 14:50 \n06:50 07:40 09:30 10:20 16:00 16:50 \n07:25 08:15 10:30 11:20 18:00 18:50 \n08:20 09:10 12:30 13:20 21:00 21:50 \n10:00 10:50 13:30 14:20 23:00 23:50 \n10:35 11:25 14:30 15:20 01:00  \n11:30 12:20 15:30 16:20   \n12:10 13:00 16:30 17:20   \n12:45 13:35 17:30 18:20   \n13:40 14:30 18:30 19:20   \n14:30 15:20 20:30 21:20   \n15:05 15:55   21:30   22:20   \n16:00 16:50   22:30   23:20   \n16:40 17:50   23:30   \n17:15 18:05   00:30   \n18:10 19:00 FI – ATENDE A FACULDADE NO SENTIDO CENTRO - BAIRRO \n20:10 21:00 \nPara  maior  comodidade  sugerimos  baixar  o  aplicativo  da  SOU,  \natravés                  do                  link                  segue                  link                  \nhttps://play.google.com/store/apps/details?id=br.com.sou.app.",
+            "similarity": 0.63,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155542392_ljtur",
+            "documentTitle": "306-Tabatinga-Massaguacu-via-Jetuba",
+            "content": "QUADRO DE HORÁRIOS\n\nLINHA 306 TABATINGA VIA MASSAGUAÇÚ \nDIAS ÚTEIS SÁBADOS E FERIADOS DOMINGOS \nSaída Rodoviária Saída Tabatinga Saída Rodoviária Saída Tabatinga Saída Rodoviária Saída Tabatinga \n00:50 01:50 00:50 01:50 00:50 01:50 \n03:30 04:30 03:00 04:00 04:30 05:30 \n04:00 05:00 04:00 05:00 05:30 06:30 \n04:30 05:30 04:30 05:30 06:30 07:30 \n05:00 06:00 05:00 06:00 07:30 08:45 \n05:20      06:20 IF 05:30 06:30 08:30 10:00 \n05:40 06:40 06:00 07:00 09:30 11:00 \n06:00 07:00 06:30 07:30 10:30 12:00 \n06:10 07:20 07:00 08:00 11:30 13:00 \n06:30 07:35 07:30 08:30 12:30 14:00 \n06:50 07:55 08:00 09:00 13:30 15:00 \n07:10 08:15 08:30 09:30 14:30 16:00 \n07:30 08:35 09:00 10:00 15:30 17:00 \n07:50 08:55 09:30 10:30 16:30 18:00 \n08:10 09:15 10:00 11:00 17:30 19:00 \n08:30 09:35 10:30 11:30 18:30 19:30 \n08:50 09:55 11:00 12:00 19:30 20:30 \n09:10 10:15 11:30 12:30 20:30 21:30 \n09:40 10:45 12:00 13:00 21:30 22:30 \n10:10 11:15 12:30 13:30 22:30 23:30 \n10:40 11:45 13:00 14:00 23:30 00:30 \n11:15 12:15 13:30 14:30   \n11:40 12:45 14:00 15:00   \n12:10 13:15 14:30 15:30   \n12:40 13:45 15:00 16:00   \n13:15 14:05 15:30 16:30   \n13:40 14:45 16:00 17:00   \n14:10 15:05 16:30 17:30   \n14:40 15:45 17:00 18:00   \n15:10 16:15 17:30 18:30   \n15:40 16:45 18:00 19:00   \n16:10 17:15 18:30 19:30   \n16:40 17:45 19:00 20:00   \n17:10 18:15 19:30 20:30   \n17:40 18:45 20:00 21:00   \n18:10 19:15 20:30 21:30   \n18:40 19:40 21:00 22:00   \n19:10 20:10 21:30 22:30   \n19:40 20:40 22:00 23:00   \n20:15 21:10 22:30 23:30   \n21:15 22:10 23:20 00:10   \n21:40 22:40 23:59 01:00   \n22:10 23:10     \n22:40 IF 23:40     \n23:10 00:10     \n23:59 01:00",
+            "similarity": 0.63,
+            "chunkIndex": 1
+          },
+          {
+            "documentId": "doc_1789155513007_s9xkn",
+            "documentTitle": "108-Jaragua",
+            "content": "Página 1 de 2\n\nQUADRO DE HORÁRIOS",
+            "similarity": 0.62,
+            "chunkIndex": 0
+          }
+        ],
+        "handoffTriggered": false
+      }
+    ]
+  }
+]

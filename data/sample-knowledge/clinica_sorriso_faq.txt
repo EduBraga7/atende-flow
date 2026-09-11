@@ -1,0 +1,93 @@
+# BASE DE CONHECIMENTO OFICIAL - CLÍNICA ODONTOLÓGICA & ESTÉTICA SORRISO & BEM-ESTAR
+
+## 1. INFORMAÇÕES GERAIS E CONTATO
+- Razão Social: Clínica Sorriso & Bem-Estar Odontologia Integrada Ltda.
+- Endereço: Av. Paulista, 1500, Conjunto 82 - Bela Vista, São Paulo - SP
+- Horário de Funcionamento:
+  * Segunda a Sexta-feira: 08:00 às 19:30
+  * Sábados: 08:30 às 13:30
+  * Domingos e Feriados: Fechado (Atendimento apenas para Urgências via Plantão telefônico)
+- Telefone e WhatsApp Oficial: (11) 98765-4321
+- E-mail: contato@sorrisoebemestar.com.br
+- Responsável Técnico: Dra. Camila Siqueira (CRO-SP 102.458)
+
+---
+
+## 2. TRATAMENTOS E PROCEDIMENTOS OFERECIDOS
+
+### A. Clareamento Dental
+- **Clareamento a Laser / Consultório:**
+  * Realizado em consultório com aplicação de gel clareador de alta concentração ativado por luz.
+  * Duração: cerca de 2 sessões de 50 minutos.
+  * Indicação: Pacientes que desejam resultados rápidos e supervisionados.
+  * Valor médio estimado: R$ 850 a R$ 1.200 (necessita de avaliação prévia de gengiva e cáries).
+- **Clareamento Caseiro Supervisionado:**
+  * O dentista faz o molde das arcadas e confecciona moldeiras de silicone personalizadas. O paciente aplica o gel em casa por 14 a 21 dias (2 a 4 horas por dia).
+  * Valor médio estimado: R$ 600 a R$ 800.
+- **Orientações Importantes:**
+  * Durante o clareamento, evitar alimentos e bebidas com corantes intensos (café, vinho tinto, refrigerante de cola, molho de tomate, açaí) e tabagismo.
+  * Sensibilidade temporária é comum e pode ser controlada com creme dental dessensibilizante indicado pela clínica.
+
+### B. Ortodontia & Alinhadores Invisíveis (Invisalign e Alinhadores Estéticos)
+- **Aparelho Fixo Metálico Tradicional:** Manutenções mensais. Custo médio de manutenção: R$ 120 a R$ 180/mês.
+- **Aparelho Estético (Safira ou Porcelana):** Braquetes transparentes e discretos.
+- **Alinhadores Invisíveis (Invisalign Doctor Credenciada):**
+  * Placas transparentes removíveis trocadas a cada 10 a 14 dias.
+  * Planejamento 100% digital com escaneamento intraoral 3D (iTero) feito na consulta de avaliação.
+  * Ideal para quem busca máxima discrição, conforto e facilidade de higienização.
+  * Valores sob medida após escaneamento digital (planos a partir de R$ 4.500 com parcelamento em até 18x sem juros).
+
+### C. Implantes Dentários e Próteses
+- Implantes unitários e protocolo sobre implantes (arcada total fixa).
+- Materiais importados (titânio biocompatível e zircônia).
+- Procedimento com anestesia local de última geração (anestesia computadorizada sem dor) e opção de sedação com óxido nitroso para pacientes ansiosos.
+- Avaliação com tomografia computadorizada recomendada.
+
+### D. Harmonização Orofacial (HOF)
+- **Toxina Botulínica (Botox):** Tratamento de rugas de expressão, sorriso gengival e alívio de bruxismo / dor na ATM. Duração: 4 a 6 meses.
+- **Preenchimento com Ácido Hialurônico:** Lábios (contorno e volume), olheiras, mandíbula e bigode chinês.
+- **Bioestimuladores de Colágeno (Radiesse / Sculptra):** Rejuvenescimento e sustentação da pele.
+
+### E. Odontopediatria e Limpeza Preventiva (Profilaxia)
+- Limpeza com ultrassom e jato de bicarbonato para remoção de tártaro e manchas.
+- Aplicação tópica de flúor.
+- Frequência recomendada: a cada 6 meses.
+- Custo de profilaxia completa: R$ 220,00.
+
+---
+
+## 3. CONVÊNIOS E FORMAS DE PAGAMENTO
+
+### Convênios Aceitos (Somente procedimentos clínicos básicos e profilaxia):
+- Amil Dental
+- SulAmérica Odonto
+- Bradesco Dental
+- Porto Seguro Odonto
+- MetLife
+
+*Atenção:* Procedimentos estéticos (Clareamento, Lentes de Contato, Alinhadores Invisíveis e Harmonização Facial) NÃO são cobertos por convênios, mas emitimos Nota Fiscal e relatório detalhado para solicitação de reembolso caso seu plano contemple essa modalidade.
+
+### Formas de Pagamento para Procedimentos Particulares:
+- Cartão de Crédito em até 12x (sem juros para tratamentos acima de R$ 1.000)
+- Pagamento à vista via Pix ou Dinheiro com 5% de desconto
+- Financiamento odonto em até 24x via boleto bancário (sujeito à análise de crédito rápida na recepção)
+
+---
+
+## 4. POLÍTICAS DE AGENDAMENTO, TOLERÂNCIA E CANCELAMENTO
+- As consultas devem ser agendadas previamente pela recepção ou WhatsApp.
+- Tolerância para atrasos: até 15 minutos. Após esse período, pode ser necessário reagendar para não prejudicar os próximos pacientes.
+- Cancelamentos e reagendamentos devem ser avisados com pelo menos 24 horas de antecedência.
+
+---
+
+## 5. REGRAS DE TRANSBORDO PARA ATENDIMENTO HUMANO / EMERGÊNCIAS
+A inteligência artificial deve identificar as seguintes situações e transferir IMEDIATAMENTE para a equipe humana da recepção:
+1. **Emergências e Dor Aguda:**
+   - Paciente relata dor de dente insuportável, inchaço visível na bochecha/face, sangramento abundante ou trauma/quebra recente de dente por acidente.
+   - *Ação da IA:* Demonstrar empatia, orientar não tomar remédios por conta própria sem prescrição e direcionar imediatamente para a recepção/plantão de urgência com mensagem prioritária.
+2. **Solicitação Explícita de Agendamento ou Falar com Humano:**
+   - Se o usuário disser "quero agendar um horário", "quero marcar consulta", "falar com atendente", "falar com a secretária", "falar com a Dra. Camila".
+   - *Ação da IA:* Coletar o nome do paciente, preferência de turno (manhã ou tarde) e transferir para a secretária finalizar a confirmação na agenda.
+3. **Casos Clínicos Complexos ou Dúvidas não respondidas na documentação:**
+   - A IA nunca deve inventar diagnósticos médicos ou prometer cura. Deve esclarecer com base na documentação e solicitar avaliação presencial com a dentista.
