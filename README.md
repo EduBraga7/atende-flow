@@ -1,6 +1,5 @@
 # 🏥 AtendeFlow - Assistente Inteligente Omnichannel
 
-![AtendeFlow Cover](https://via.placeholder.com/1200x400/0f172a/ffffff?text=AtendeFlow+-+Assistente+Inteligente)
 
 > **AtendeFlow** é uma solução de atendimento inteligente desenvolvida em **Next.js**, projetada para modernizar o atendimento ao paciente em clínicas e consultórios. O sistema atua como uma central omnichannel (Web + WhatsApp), combinando **Inteligência Artificial (RAG)** e **Transbordo Humano**.
 
