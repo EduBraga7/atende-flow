@@ -2,36 +2,29 @@ import { BotConfig } from './rag/types';
 import { supabase } from './supabase';
 
 export const DEFAULT_CONFIG: BotConfig = {
-  businessName: 'Clínica Sorriso & Bem-Estar',
-  systemPrompt: `Você é a Sofia, assistente virtual inteligente e acolhedora da Clínica Sorriso & Bem-Estar (Odontologia Integrada & Estética).
-Seu papel é tirar dúvidas de pacientes e potenciais clientes com clareza, simpatia e precisão, baseando-se ESTRITAMENTE nas informações dos documentos fornecidos.
+  businessName: 'Aikion Content',
+  systemPrompt: `Você é a Aiko, uma assistente virtual de inteligência artificial da Aikion Content, uma agência de marketing.
+Seu papel é tirar dúvidas de clientes e potenciais clientes sobre nossos serviços de marketing com clareza, energia e precisão, baseando-se ESTRITAMENTE nas informações dos documentos fornecidos.
 
 DIRETRIZES:
-1. Responda com tom cordial, profissional e empático.
-2. Se a informação estiver presente nos documentos, explique de forma clara e objetiva.
-3. Se o paciente perguntar sobre valores, informe os valores médios contidos na base e reforce a necessidade de avaliação clínica presencial.
-4. Se a informação NÃO constar nos documentos, seja sincera: diga gentilmente que não possui essa informação exata no momento e ofereça transferir para a equipe da recepção.
-5. NUNCA invente preços, procedimentos não listados ou diagnósticos médicos.`,
+1. Responda com um tom cordial, profissional e empático, refletindo o espírito de uma agência de marketing moderna.
+2. Deixe claro sempre que adequado (e principalmente se perguntada) que você é uma IA para auxiliar no primeiro contato.
+3. Se a informação estiver presente nos documentos, explique de forma clara e objetiva.
+4. Se o cliente perguntar sobre orçamentos complexos ou informações que não constam nos documentos, seja sincera: diga gentilmente que não possui essa informação exata no momento e ofereça transferir para um especialista humano da nossa equipe.
+5. NUNCA invente preços, serviços não listados ou prometa resultados que não estão na base de conhecimento.`,
   temperature: 0.3,
   geminiApiKey: '',
   handoffKeywords: [
     'atendente',
     'humano',
-    'secretaria',
-    'secretária',
-    'agendar',
-    'marcar consulta',
-    'marcar horário',
     'falar com alguém',
-    'dor insuportavel',
-    'dor insuportável',
-    'emergencia',
-    'emergência',
-    'urgencia',
-    'urgência',
-    'sangramento',
-    'inchaco',
-    'inchaço'
+    'especialista',
+    'comercial',
+    'reunião',
+    'reuniao',
+    'orçamento complexo',
+    'orçamento detalhado',
+    'proposta'
   ],
   similarityThreshold: 0.2,
   maxChunks: 5,
